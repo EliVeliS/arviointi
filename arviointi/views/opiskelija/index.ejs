@@ -23,7 +23,7 @@
                     <a class="nav-link">Opiskelijan luonti tai poistaminen</a>
                 </li>
                 <li class="nav-pill ml-auto">
-                    <a class="nav-link active" href="/Opiskelija/add">Lisää opiskelija</a>
+                    <a class="nav-link active" href="/Opiskelija/add">Add Opiskelija</a>
                 </li>
             </ul>
         </div>
@@ -36,8 +36,8 @@
                     <th scope="col">#</th>
                     <th scope="col">Etunimi</th>
                     <th scope="col">Sukunimi</th>
-                    <th scope="col">Osoite</th>
-                    <th scope="col">Luokkatunnus</th>
+	    <th scope="col">Osoite</th>
+	    <th scope="col">Luokkatunnus</th>
                     <th width="200px">Action</th>
                 </tr>
             </thead>
@@ -47,11 +47,11 @@
                     <th scope="row"><%= (i+1) %></th>
                     <td><%= data[i].Etunimi%></td>
                     <td><%= data[i].Sukunimi%></td>
-                    <td><%= data[i].Osoite%></td>
-                    <td><%= data[i].Luokkatunnus%></td>
+	    <td><%= data[i].Osoite%></td>
+	    <td><%= data[i].Luokkatunnus%></td>
                     <td>
-                        <a class="btn btn-success edit" href="../opiskelija/edit/<%=data[i].id%>">Edit</a>                       
-                        <a class="btn btn-danger delete" onclick="return alert('Haluatko varmasti poistaa opiskelijan?')" href="../opiskelija/delete/<%=data[i].id%>">Delete</a>                       
+                        <a class="btn btn-success edit" href="../opiskelija/edit/<%=data[i].idOpiskelija%>">Edit</a>                       
+                        <a class="btn btn-danger delete" onclick="return alert('Oletko varma, että haluat poistaa opiskelijan?')" href="../opiskelija/delete/<%=data[i].idOpiskelija%>">Delete</a>                       
                     </td>
                 </tr>
             <% } %>
@@ -61,7 +61,7 @@
         
         <!-- if result is empty -->
         <% if(!data.length) { %>
-            <p class="text-center">Opiskelijaa ei löytynyt...</p>
+            <p class="text-center">Opiskelijaa ei löytynyt!</p>
         <% } %>
 
         </div>
