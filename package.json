@@ -1,0 +1,22 @@
+{
+  "name": "arviointi",
+  "version": "1.0.0",
+  "description": "Opintorekisteritietokanta",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliVeliS/arviointi.git"
+  },
+  "author": "EliVeliS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliVeliS/arviointi/issues"
+  },
+  "homepage": "https://github.com/EliVeliS/arviointi#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
