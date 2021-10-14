@@ -84,7 +84,7 @@ router.post('/add', function(req, res, next) {
 // muokkaa opiskelija taulua
 router.get('/edit/(:idArviointi)', function(req, res, next) {
 
-    let idArviointi = req.params.id;
+    let idArviointi = req.params.idArviointi;
    
     dbConn.query('SELECT * FROM arviointi WHERE idArviointi = ' + idArviointi, function(err, rows, fields) {
         if(err) throw err
