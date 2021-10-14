@@ -97,7 +97,7 @@ router.get('/edit/(:idOpintojakso)', function(req, res, next) {
                 idOpintojakso: rows[0].idOpintojakso,
                 Nimi: rows[0].Nimi,
                 Laajuus: rows[0].Laajuus,
-		idKoodi: rows[0].idKoodi
+		Koodi: rows[0].Koodi
             })
         }
     })
@@ -109,7 +109,7 @@ router.post('/update/:idOpintojakso', function(req, res, next) {
     let idOpintojakso = req.params.idOpintojakso;
     let Nimi = req.body.Nimi;
     let Laajuus = req.body.Laajuus;
-    let idKoodi = req.body.idKoodi;
+    let Koodi = req.body.Koodi;
     let errors = false;
 
 if(Nimi.length === 0 || Laajuus.length === 0|| Koodi.length === 0) {
@@ -134,14 +134,14 @@ if(Nimi.length === 0 || Laajuus.length === 0|| Koodi.length === 0) {
             Koodi: Koodi
         }
         // update query
-        dbConn.query('UPDATE arviointi SET ? WHERE idOpintojakso = ' + idOpintojakso, form_data, function(err, result) {
+        dbConn.query('UPDATE opintojakso SET ? WHERE idOpintojakso = ' + idOpintojakso, form_data, function(err, result) {
             //if(err) throw err
             if (err) {
                 // set flash message
                 req.flash('virhe', err)
                 // render to edit.ejs
             res.render('opintojakso/add', {
-            idOpintojakso: req.params.Opintojakso,
+            idOpintojakso: req.params.idOpintojakso,
             Nimi: Nimi,
             Laajuus: Laajuus,
             Koodi: Koodi
