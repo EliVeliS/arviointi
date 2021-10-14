@@ -38,6 +38,7 @@ app.use(flash());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/opiskelija', opiskelijaRouter);
 app.use('/arviointi', arviointiRouter);
 
 // catch 404 and forward to error handler
