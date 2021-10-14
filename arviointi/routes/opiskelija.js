@@ -5,7 +5,7 @@ var dbConn  = require('../lib/db');
 // display books page
 router.get('/', function(req, res, next) {
       
-    dbConn.query('SELECT * FROM opiskelija ORDER BY idOpiskelija desc',function(err,rows)     {
+    dbConn.query('SELECT * FROM opiskelija ORDER BY idOpiskelija',function(err,rows)     {
  
         if(err) {
             req.flash('error', err);
@@ -178,7 +178,7 @@ router.get('/delete/(:idOpiskelija)', function(req, res, next) {
             res.redirect('/opiskelija')
         } else {
             // set flash message
-            req.flash('Onnistui!', 'Opiskelijan tiedot poistettu kannasta idOpiskelija = ' + idOpiskelija)
+            req.flash('Onnistui!', 'Opiskelijan tiedot poistettu kannasta ID = ' + idOpiskelija)
             res.redirect('/opiskelija')
         }
     })
