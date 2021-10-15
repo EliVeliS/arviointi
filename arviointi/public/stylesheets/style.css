@@ -1,6 +1,17 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 325px;
+  font: 60px Comic Sans;
+  background-image: url("etusivu.gif");
+  background-color: #cccccc;
+}
+h1 {
+    color: #FF00FF;
+   }
+p {
+  font: OCR A Std;
+  font-family: monospace;
+  font-size: 20px;
+  color: DeepPink;
 }
 
 a {
